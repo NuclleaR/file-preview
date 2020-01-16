@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.thumb-gallery-wrapper {
+  width: 602px;
+  overflow: hidden;
+}
+
+.thumb-gallery {
+  height: 100px;
+  display: flex;
+  left: 0px;
+  position: relative;
+}
+
+.thumbnail {
+  height: 98px;
+  box-sizing: border-box;
+}
+
+.thumbnail.active {
+  border: 1px solid black;
+  border-style: inset;
+}
+
+.thumbnail-image {
+  height: inherit;
+  width: 200px;
+}

@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import ThumbGallery from './FilePreview/ThumbGallery/FileGallery';
 import './App.css';
+import { photos } from './__fixtures__/photos';
+import { FILE_TYPES } from './FilePreview/ThumbGallery/constants';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThumbGallery
+        files={photos.map(photo => {
+          photo.fileType = FILE_TYPES.IMAGE;
+          return photo;
+        })}
+      />
     </div>
   );
 }
