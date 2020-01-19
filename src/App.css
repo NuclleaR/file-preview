@@ -63,3 +63,13 @@
   height: inherit;
   width: 200px;
 }
+
+.previewer {
+  height: 80vh;
+  width: 50%;
+  max-width: calc(100vw - 60px);
+}
+
+.previewer img {
+  width: 100%;
+}

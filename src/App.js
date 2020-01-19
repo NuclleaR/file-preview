@@ -1,19 +1,13 @@
 import React from 'react';
 
-import ThumbGallery from './FilePreview/ThumbGallery/FileGallery';
 import './App.css';
-import { photos } from './__fixtures__/photos';
-import { FILE_TYPES } from './FilePreview/ThumbGallery/constants';
+import { attachments } from './__fixtures__/files';
+import FilesPreviewer from './FilePreview';
 
 function App() {
   return (
     <div className="App">
-      <ThumbGallery
-        files={photos.map(photo => {
-          photo.fileType = FILE_TYPES.IMAGE;
-          return photo;
-        })}
-      />
+      <FilesPreviewer files={attachments} />
     </div>
   );
 }
